@@ -8,7 +8,7 @@ def average(p):
     return round(sum(p) / len(p), 2)
 
 
-app = Flask('School app')
+app = Flask('Amazing school app')
 
 conn = psycopg2.connect(
     host="localhost",
@@ -153,7 +153,7 @@ def contact():
 @app.errorhandler(404)
 def page_not_found(e):
     """Catch inexistent routes"""
-    return render_template('404.html'), 404
+    return render_template('errors/404.html'), 404
 
 
 if __name__ == '__main__':
