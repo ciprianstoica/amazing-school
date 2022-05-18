@@ -1,0 +1,30 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if search %}
+  Rezultatele cautarii dupa <i>'{{search}}'</i>:
+  {% else %}
+    Lista elevilor scolii:
+  {% endif %}
+  <br><br>
+  {% if students %}
+    <table class="list">
+      <tr><th>Nume</th><th>Clasa</th></tr>
+      {% for sid, sname, cid, cname in students %}
+      <tr>
+        <td><a href="/student/{{sid}}">{{sname}}</a></td>
+        <td><a href="/class/{{cid}}">{{cname}}</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="warning">Nu exista rezultate!</div>
+  {% endif %}
+  <br/>
+  <form action="/search/" method="post">
+    <input type="text" name="search" placeholder="cauta elev" value="{{search}}">
+    <input type="submit" value="Cauta">
+  </form>
+
+
+{% endblock content %}

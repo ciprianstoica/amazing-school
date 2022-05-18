@@ -1,0 +1,22 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  <table class="list">
+    <tr>
+        <td>
+            Str. Pacii 12<br/>
+            Atlantida, 786543<br>
+            Romania
+        </td>
+        <td>
+            <form name="contactform">
+                <input type="text" name="nume" placeholder="nume"><br><br>
+                <input type="email" name="email" placeholder="email"><br><br>
+                <textarea name="mesaj" placeholder="mesaj" rows="5"></textarea><br><br>
+                <input type="button" value="Trimite" onclick="validate()">
+            </form>
+        </td>
+    </tr>
+  </table>
+
+{% endblock content %}

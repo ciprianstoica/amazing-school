@@ -1,0 +1,15 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if student %}
+    Date student:<br><br>
+    <table class="list">
+      <tr><th>Nume</th><td>{{student[1]}}</td></tr>
+      <tr><th>Prenume</th><td>{{student[2]}}</td></tr>
+      <tr><th>Clasa</th><td><a href="/class/{{student[3]}}">{{student[4]}}</a></td></tr>
+    </table>
+  {% else %}
+    <div class="error">Elev inexistent</div>
+  {% endif %}
+
+{% endblock content %}

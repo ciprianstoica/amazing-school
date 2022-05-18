@@ -1,0 +1,34 @@
+<html>
+<head>
+  {% if title %}
+    <title>{{ title }}</title>
+  {% else %}
+    <title>Scoala noastra</title>
+  {% endif %}
+
+  <link type="image/png" sizes="32x32" rel="icon" href="/static/images/icons8-school-32.png">
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="/static/scripts/script.js"></script>
+</head>
+<body>
+  <div class="header">The amazing school</div>
+  <div class="menu">
+    <table>
+      <tr>
+        <td>
+          <a href="/home">Acasa</a>
+          <a href="/students">Elevi</a>
+          <a href="/classes">Clase</a>
+          <a href="/contact">Contact</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="content">
+  {% block content %} {% endblock %}
+  </div>
+
+</body>
+</html>
+

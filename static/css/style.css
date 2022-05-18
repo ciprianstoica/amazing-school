@@ -1,0 +1,68 @@
+body {
+    background-color: #e8f4f8;
+}
+
+a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    color: orange;
+}
+
+div.content {
+    max-width: 500px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+div.header {
+    max-width: 500px;
+    margin: auto;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 40px;
+}
+
+div.menu {
+    max-width: 500px;
+    margin: auto;
+    font-family: Arial;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+div.menu table {
+    width: 100%;
+}
+
+div.menu td {
+    text-align: right;
+}
+
+table.list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.list th,
+table.list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table.list th {
+    background-color: #d8e4e8;
+}
+
+div.warning {
+    color: orange;
+}
+
+div.error {
+    color: red;
+}

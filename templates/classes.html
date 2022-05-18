@@ -1,0 +1,17 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if classes %}
+    <table class="list">
+      <tr><th>Nume</th></tr>
+      {% for cid, cname in classes %}
+      <tr>
+        <td><a href="/class/{{cid}}">{{cname}}</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="warning">Nu exista rezultate!</div>
+  {% endif %}
+
+{% endblock content %}

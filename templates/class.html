@@ -1,0 +1,20 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if students %}
+  Elevii clasei <b>{{class_name}}</b>:<br><br>
+
+  <table class="list">
+    <tr><th>Nume</th></tr>
+    {% for sid, sname, cname in students %}
+    <tr>
+      <td><a href="/student/{{sid}}">{{sname}}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <div class="error">Clasa inexistenta</div>
+  {% endif %}
+
+
+{% endblock content %}
