@@ -120,7 +120,7 @@ def show_classes():
     return render_template('classes.html', classes=records)
 
 
-@app.route('/class/<class_id>/')
+@app.route('/class/<int:class_id>/')
 def show_class(class_id):
     """Show the class with the given class_id"""
 

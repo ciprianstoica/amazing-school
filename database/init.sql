@@ -1,25 +1,25 @@
-CREATE TABLE public."class" (
-	id serial4 NOT NULL,
-	class_number int4 NULL,
-	class_letter varchar(2) NULL,
-	CONSTRAINT class_pkey PRIMARY KEY (id)
+create table
+	id serial4 not null,
+	class_number int4 null,
+	class_letter varchar(2) null,
+	constraint class_pkey primary key (id)
 );
 
-CREATE TABLE public.student (
-	id serial4 NOT NULL,
-	first_name varchar(20) NOT NULL,
-	last_name varchar(20) NOT NULL,
-	class_id int4 NOT NULL,
-	CONSTRAINT student_pkey PRIMARY KEY (id),
-	CONSTRAINT student_class_id_fkey FOREIGN KEY (class_id) REFERENCES public."class"(id)
+create table student (
+	id serial4 not null,
+	first_name varchar(20) not null,
+	last_name varchar(20) not null,
+	class_id int4 not null,
+	constraint student_pkey primary key (id),
+	constraint student_class_id_fkey foreign key (class_id) references "class"(id)
 );
 
-INSERT INTO "PUBLIC"."class" (CLASS_NUMBER,CLASS_LETTER) VALUES
+insert into "class" (class_number,class_letter) values
 	 (10,'a'),
 	 (8,'b'),
 	 (5,'c');
 
-INSERT INTO "PUBLIC"."STUDENT" (FIRST_NAME,LAST_NAME,CLASS_ID) VALUES
+insert into student (first_name,last_name,class_id) values
 	 ('Ionel','Pop',1),
 	 ('Ionela','Popa',2),
 	 ('Ionut','Popescu',2),
