@@ -1,4 +1,4 @@
-create table
+create table "class" (
 	id serial4 not null,
 	class_number int4 null,
 	class_letter varchar(2) null,
