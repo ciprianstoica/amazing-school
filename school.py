@@ -13,8 +13,8 @@ app = Flask('Amazing school app')
 conn = psycopg2.connect(
     host="localhost",
     database="mydb",
-    user="school",
-    password="school")
+    user="school",      # change with your local user
+    password="school")  # change with your local password
 
 
 @app.route('/')
